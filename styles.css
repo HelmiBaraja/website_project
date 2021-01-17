@@ -1,18 +1,50 @@
-/* CSS is required to provide style to HTML */
+/* use flex boxes */
 
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    /* padding: margin definition */
+}
 
-/* styles.css allows for selection of elements on page and make changes to those styles */
-
-.placeholder {
-    background-color: red;
+.left-side {
+    /* make links appear next to each other instead of on top of each other */
+    display: flex
 }
 
 
-/* If placeholder is found red is given as background color */
+/* tree downward traversion: grab divs inside of left-side, apply styles to left */
 
-.anotherClass {
-    background-color: lightseagreen;
+.nav-wrapper>.left-side>div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    /* em: percentage of default */
+    text-transform: uppercase;
+    /* use CSS to appear capitalized instead of manual capitalization in HTML */
 }
 
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    /* half a second animation in CSS */
+}
 
-/* If anotherClass is found lightseagreen is given as background color */
+.nav-link-wrapper a {
+    /* inside nav-link-wrapper, grab the <a> link */
+    color: lightgray;
+    text-decoration: none;
+    /* remove underlining of links */
+    transition: color 0.5s;
+    /* animate color on top of bottom border */
+}
+
+.nav-link-wrapper:hover {
+    /* hover for div */
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    /* hover for link <a> */
+    color: black;
+}
