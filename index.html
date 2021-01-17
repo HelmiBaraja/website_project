@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <!--link to styles.css-->
 </head>
@@ -53,7 +53,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/01.png">
+                                <img src="images/transparent_numbers/01.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -70,7 +70,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/02.png">
+                                <img src="images/transparent_numbers/02.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -87,7 +87,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/03.png">
+                                <img src="images/transparent_numbers/03.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -104,7 +104,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/04.png">
+                                <img src="images/transparent_numbers/04.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -121,7 +121,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/05.png">
+                                <img src="images/transparent_numbers/05.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -138,7 +138,7 @@
                         <!--style here contains a little snippet of CSS-->
                         <div class="img-text-wrapper">
                             <div class="logo-wrapper">
-                                <img src="images/transparent_numbers/06.png">
+                                <img src="images/transparent_numbers/06.png" alt="">
                             </div>
 
                             <div class="subtitle">
@@ -148,9 +148,33 @@
 
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </body>
+
+<!--introduce js-->
+
+<script>
+    const gridItems = document.querySelectorAll('.grid-item-wrapper')
+
+    gridItems.forEach(gridItem => {
+        gridItem.addEventListener('mouseover', () => {
+            // Use js to manipulate HTML
+            // childNode index of 3 (div.grid-img-background)
+            console.log(gridItem.childNodes[3].classList);
+            gridItem.childNodes[3].classList.add('img-darken');
+        })
+
+        gridItem.addEventListener('mouseout', () => {
+            // Use js to manipulate HTML
+            // childNode index of 3 (div.grid-img-background)
+            console.log(gridItem.childNodes[3].classList);
+            gridItem.childNodes[3].classList.remove('img-darken');
+        })
+    })
+</script>
 
 </html>

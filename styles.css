@@ -107,15 +107,26 @@ body {
 
 .img-text-wrapper .subtitle {
     transition: 1s;
+    font-weight: 600;
     color: transparent;
 }
 
 .img-text-wrapper:hover .subtitle {
-    color: lightseagreen;
+    color: rgb(0, 255, 242);
     font-weight: 600;
 }
 
 .logo-wrapper img {
     width: 50%;
     margin-bottom: 20px;
+}
+
+.subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(80%);
 }
