@@ -1,1 +1,15 @@
-appear styles
+/* styles.css allows for selection of elements on page and make changes to those styles */
+
+.placeholder {
+    background-color: red;
+}
+
+
+/* If placeholder is found red is given as background color */
+
+.anotherClass {
+    background-color: lightseagreen;
+}
+
+
+/* If anotherClass is found lightseagreen is given as background color */
