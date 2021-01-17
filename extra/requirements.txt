@@ -1,0 +1,15 @@
+project: website building
+
+stories / requirements
+
+as product owner, would like:
+
+    navigation bar on top of website
+        contains links: home, about, contact info
+
+    portfolio grid as central point
+        contains images: at least, animated? (javascript)
+
+    about page
+        split column
+        image
